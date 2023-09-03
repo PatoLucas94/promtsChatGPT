@@ -1,0 +1,59 @@
+Usted es un experto [funcion]. Crea [resultado]. El objetivo es [Objetivo final]. El contenido es para [contexto]. Tus directrices para escribir son [restricciones].
+
+funcion: Como queres que chatGPT actue. Como un vendedor, mecanico, experto en... etc
+resultado: Lo que queremos obtener. Un email, un libro, una venta... etc
+Objetivo final: Proposito del resultado. "Resumen de ventas", por ejemplo. "Para que mandas ese mail" 
+contexto: Informacion tipo "quien debe hacerlo?, Que se debe hacer? Donde ? o Porque ?"
+restricciones: Tenga un determinado tono, o longitud de palabras
+
+POR EJEMPLO:
+
+Eres un experto de marketing. Crea 5 correos electronicos que terminen con una llamada a la accion. El objetivo es impulsar las ventas de mi producto. Los correos electronicos estan dirigidos a una audiencia online de emprendedores. Los correos electronicos deben ser amistosos y tener menos de 200 palabras. 
+
+
+*************** Tecnicas de Promp engineering 
+
+PRIMING ---> Darle mas informacion al modelo. Ya sea con ejemplos o con el mismo tono
+Proporcionar una entrada inicial antes de generar una respuesta. Para guiar al modelo y que genere una respuesta que sea mas relevante coherente con la salida deseada del usuario.
+
+SHOT-PROMPTING ---> Mejora la concentracion y la presicion. al proporcionar un marco especifico, ChatGPT provee de respuestas mas detalladas, repetibles y precisas.
+
+* Zero - shot prompting: Tecnica a la que no se dan datos previos ni directrices antes de mandar la solicitud a chat.
+* One - shot propmting: Le hemos dado un dato o un ejemplo al chat.
+* Few - shot prompting: Le pasamos mas info o un par de ejemplos antes de mandarle la consulta. 
+
+
+CHAIN - OF - THOUGHT (CoT) ---> Permite capacidades de razonamiento complejas a traves de pasos intermedios. Se puede combinar con few shot promting. 
+Es enseñar el razonamiento paso a paso.
+
+ZERO - SHOT CHAIN OF THOUGHT (zero-sho CoT) ---> Implica agregar "Pensemos pasos a paso" el promt inicial
+Es como decir "Pensando en voz alta". Es comun terminar el prompt con "Piensalo paso a paso" asi chatGPT va razonando.
+
+
+****************** Tecnicas mas Avanzadas
+
+ROLE PLAYING ---> Sirve para crear conversaciones inmersivas. Se le pide a ChatGPT que asuma un rol con el promt "actua como"
+
+Formula de la pregunta: 
+
+1. "Quiero que actues como un ..." (doctor, analista)
+2. "Te dare..." (informacion especifica, un producto, etc)
+3. "Luego, tendras que... " (tarea a desarrollar por chatGPT)
+4. "Con un formato/tono/estilo... " (formato, personalidad o estilo de escritura)
+5. "Los detalles importantes son... "
+
+JAILBREAK ---> Obtener el control de ChatGPT eliminando las limitaciones de ChatGPT con respecto al dispositivo donde se esta usando. Es cuando chatGPT no es politicamente correcta, hace lo que quiere en base al rolePlaying que le asignemos. Como se va de la norma.
+
+GENERATED KNOWNLEDGE PROMPTING ---> Pedirle al modelo que genere informacion potencialmente util sobre una pregunta/indicacion determinada antes de generar una respuesta final. Es pedirle al chat que busca la info que le pido y ademas utilice esa info para generar un texto o resumen (en el mismo resultado).
+
+KNOWNLEDGE INTEGRATION (Fine Tunning)---> Es como la de arriba pero nosotros le damos mas informacion para que haga el final. Le pasamos mucha informacion detallada y que utilice esa info para generar una respuesta. Por ejemplo, sabemos que su conocimiento viene hasta 2021 entonces le podemos pasar el conocimiento de 2022 y que de ahi saque una respuesta. La info se va a guardar en la conversacion, pero no si abrimos una nueva. 
+Comienza con "Aprende la siguiente informacion ..." y le pegamos el texto
+
+SELF - CONSISTENCY ---> Mostrar multiples caminos de razonamiento a traves de few-shot cot y utilizar las generaciones para seleccionar la respuesta mas consistente. Varios ejemplos distintos pero que ejemplifican la logica a demostrar 	
+
+
+
+
+
+
+
